@@ -1,7 +1,7 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({id, name, img, categoria, description, price, vacantes}) => {
+const ItemDetail = ({id, name, img, price, vacantes, categoria, description,}) => {
     return (
         <article className=''>
             <header className=''>
@@ -21,6 +21,9 @@ const ItemDetail = ({id, name, img, categoria, description, price, vacantes}) =>
                 </p>
                 <p>
                     Precio: ${price}
+                </p>
+                <p>
+                    Vacantes: {vacantes}
                 </p>
             </section>
             <footer className='ItemFooter'>

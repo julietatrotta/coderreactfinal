@@ -1,8 +1,9 @@
 .CardItem {
     padding: 1.75rem;
-    background-color: aquamarine;
+    background-color: rgb(00, 00, 80);
     border-radius: 1.75rem;
     margin: 5px;
+    color: antiquewhite;
     }
 
 .CardItem .Header{

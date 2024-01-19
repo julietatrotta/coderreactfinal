@@ -8,13 +8,13 @@ const NavBar = () => {
     <div className='divNavbar'>
         <header className='navbar'>
             <Link to="/">
-              <h2 className='logo'>JT Yôga</h2>
+              <h2 className='logo'>JT Lifestyle</h2>
             </Link>
             <nav>
                 <ul>
-                    <li><Link to={`/categoria/clases`}>Clases</Link></li> 
-                    <li><Link  to={`/categoria/cursos`}>Formación</Link></li> 
-                    <li><Link  to={`/categoria/actividades`}>Actividades</Link></li> 
+                    <li><Link to={`/categoria/Clases`}>Clases</Link></li> 
+                    <li><Link  to={`/categoria/Cursos`}>Formación</Link></li> 
+                    <li><Link  to={`/categoria/Actividades`}>Actividades</Link></li> 
                 </ul>
             
             </nav>
