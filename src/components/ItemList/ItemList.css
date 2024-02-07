@@ -1,16 +1,9 @@
 div.ItemList {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #0000805d; */
+    /* background-color: #0000805d;*/
     justify-content: space-around;
-
 }
-
-/* .ItemList {
-    display: grid;
-    gap: 1.75rem;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-} */
 
 @media (max-width: 768px) {
     .ItemList {

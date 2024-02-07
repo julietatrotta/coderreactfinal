@@ -19,7 +19,7 @@ const ItemListContainer = ({ greetings }) => {
       .catch(error => {
         console.error(error)
       })
-      .finally(() => console.log("Finalizada la promesa de filtrar por categoria"))
+     // .finally(() => console.log("Finalizada la promesa de filtrar por categoria"))
   }, [categoria])
   
   return (

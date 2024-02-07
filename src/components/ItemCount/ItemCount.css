@@ -1,9 +1,8 @@
-
-.Counter{
+.Counter {
     margin: auto;
 }
 
-div.ContadorControls{
+div.ContadorControls {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -11,19 +10,19 @@ div.ContadorControls{
     justify-content: center;
 }
 
-button.ContadorBoton{
+button.ContadorBoton {
     color: white;
     background-color: #000080;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px lightgray;
-   /* padding: 5px 7px 5px 7px; /*modifica tamaño de los botones + y - y agregar al carrito*/
+    /* padding: 5px 7px 5px 7px; /*modifica tamaño de los botones + y - y agregar al carrito*/
 }
 
-.ContadorNumber{
+.ContadorNumber {
     margin: 15px;
 }
 
-div.BotonAgregar{
+div.BotonAgregar {
     display: flex;
     justify-content: center;
     font-size: small;

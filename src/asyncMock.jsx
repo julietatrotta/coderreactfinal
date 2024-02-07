@@ -10,10 +10,10 @@ const productos = [
     },
     {
         id: "2",
-        name: 'Pack libre mensual',
+        name: 'Membresía libre mensual',
         img: '/img/clasegrupotripad.jpg',
         price: 139.99,
-        vacantes: 75,
+        vacantes: 200,
         categoria: "Clases",
         description: "Acceso ilimitado a nuestras prácticas durante un mes y cursos teóricos para alumnos."
     },

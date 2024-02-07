@@ -1,9 +1,24 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../context/CartContext'
 
-const ItemDetail = ({id, name, img, price, vacantes, categoria, description,}) => {
+const ItemDetail = ({ id, name, img, price, vacantes, categoria, description }) => {
+
+    const [toggle, setToggle] = useState(false)
+    const {agregarProducto} = useContext(CartContext)
+    
+    const añadirProducto = (quantity) => {
+        setToggle(true)
+        const productoCarrito = { id: id, name: name, img: img, price: price, vacantes: vacantes, categoria: categoria, description: description, cantidad: quantity }
+        agregarProducto(productoCarrito)
+    };
+
+
+
     return (
-        <article className=''>
+        <article className='containerdetail'>
             <header className=''>
                 <h2 className=''>
                     {name}
@@ -27,7 +42,13 @@ const ItemDetail = ({id, name, img, price, vacantes, categoria, description,}) =
                 </p>
             </section>
             <footer className='ItemFooter'>
-            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada: ', quantity)} />
+                {
+                    toggle ? (
+                        <Link className="ContadorBoton" to="/carrito">Ir al carrito</Link>
+                    ) : (
+                        <ItemCount initial={1} stock={vacantes} onAdd={añadirProducto} />
+                    )
+                }
             </footer>
         </article>
     )

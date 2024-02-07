@@ -4,11 +4,16 @@
     border-radius: 1.75rem;
     margin: 5px;
     color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
     }
 
 .CardItem .Header{
     flex-basis: 100%;
     font-size: small;
+    text-wrap: wrap;
+    text-align: center;
     /*text-transform: uppercase;*/
 }
 
@@ -19,4 +24,15 @@
 
 .CardItem .CardBody p{
     margin: 0;
+}
+
+.CardItem picture{
+    display: flex;
+    justify-content: center;
+}
+
+.CardItem .ItemImg{
+    width: 100%;
+    /* display: block;  seria para que ocupe todo el espacio pero como es demasiado grande deja la card gigante*/
+    padding: 5px;
 }
