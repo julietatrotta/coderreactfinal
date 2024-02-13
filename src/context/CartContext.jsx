@@ -8,10 +8,10 @@ const CartContext = createContext()
 const CartProvider = ({ children }) => {
     //lo inicializo como array vacio porque va a ser un array de objetos, cada objeto es un producto agregado
     const [carrito, setCarrito] = useState([])
-
+    
     const agregarProducto = (porductoNuevo) => {
         const condicion = estaEnElCarrito(porductoNuevo.id)
-
+        
         if (condicion) {
             //cambiamos la cantidad si ya esta en el carrito
             const productosModificados = carrito.map((productoCarrito) => {
@@ -21,7 +21,6 @@ const CartProvider = ({ children }) => {
                     return productoCarrito
                 }
             })
-            console.log(productosModificados)
             setCarrito(productosModificados)
         } else {
             //si no esta el producto, lo agregamos al carrito
@@ -38,20 +37,26 @@ const CartProvider = ({ children }) => {
         const cantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0) //el cero es el valor inicial de total
         return cantidad
     }
+    
+    const borrarProducto = (idProducto) => {
+        const productosFiltrados = carrito.filter((producto)=> producto.id !== idProducto)
+        setCarrito(productosFiltrados)
 
-    const borrarTodo = ()=>{
+    }
+    
+    const borrarTodo = () => {
         setCarrito([])
     }
     
-    const hola = "hola"
-
-    console.log(carrito)
-
+    const precioTotal = ()=>{//cuando usaba esta funcion me devolvia NaN así que dejé el calculo en el carrito directamente porque funciona.
+        return carrito.reduce((total, producto) => total + (parseInt(producto.cantidad) * parseFloat(producto.precio)), 0)
+    }
+    
     return (
         //Las primeras llaves de value son para incluir codigo javascript, las 2das para pasar la variable (objeto).
         //Le pasamos todas las variable y funciones que declaremos para que esten disponibles de forma global, si no no lo vamos a poder usar
         // Todo lo que pasemos dentro de value es lo que va a estar disponible dentro de mi contexto
-        <CartContext.Provider value={{ carrito, agregarProducto, cantidadTotal, borrarTodo, hola }}>
+        <CartContext.Provider value={{ carrito, agregarProducto, cantidadTotal, borrarTodo, precioTotal, borrarProducto }}>
             {children}
         </CartContext.Provider>
     )

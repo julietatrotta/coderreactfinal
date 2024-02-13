@@ -7,15 +7,13 @@ import { CartContext } from '../../context/CartContext'
 const ItemDetail = ({ id, name, img, price, vacantes, categoria, description }) => {
 
     const [toggle, setToggle] = useState(false)
-    const {agregarProducto} = useContext(CartContext)
-    
+    const { agregarProducto } = useContext(CartContext)
+
     const añadirProducto = (quantity) => {
         setToggle(true)
         const productoCarrito = { id: id, name: name, img: img, price: price, vacantes: vacantes, categoria: categoria, description: description, cantidad: quantity }
         agregarProducto(productoCarrito)
     };
-
-
 
     return (
         <article className='containerdetail'>
@@ -44,7 +42,12 @@ const ItemDetail = ({ id, name, img, price, vacantes, categoria, description }) 
             <footer className='ItemFooter'>
                 {
                     toggle ? (
-                        <Link className="ContadorBoton" to="/carrito">Ir al carrito</Link>
+                        <>
+                            <Link className="ContadorBoton" to="/carrito">Ir al carrito</Link>
+                            <Link to="/">
+                                <h3 className='logo'>Seguir comprando</h3>
+                            </Link>
+                        </>
                     ) : (
                         <ItemCount initial={1} stock={vacantes} onAdd={añadirProducto} />
                     )

@@ -1,0 +1,21 @@
+.carrito-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.carrito-item {
+    margin-bottom: 20px;
+}
+
+.linea-separadora {
+    border: 0.5px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.total-carrito {
+    margin-top: 20px;
+    text-align: right;
+}

@@ -11,9 +11,9 @@ const CartWidget = () => {
     return (
       <Link to="/carrito" className='CartWidget'>
         <span className='CartWidgetIcon'>🛒</span>
-        <span className='CartWidgetCount'>{cantidadTotal()}</span>
+        <span className={cantidadTotal()!= 0 ?'CartWidgetCount':"noDisplayCartWCount"}>{cantidadTotal()!= 0 ? cantidadTotal() : ""}</span>
       </Link>
   )
 }
 
-export default CartWidget; 
+export default CartWidget;  
