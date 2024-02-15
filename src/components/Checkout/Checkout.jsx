@@ -28,7 +28,7 @@ const Checkout = () => {
         const orden = {
             comprador: { ...datosForm },
             productos: [...carrito],
-            fecha: Date.now,
+            fecha: Date.now(),
             total: precioTotal()
         }
 
@@ -39,7 +39,6 @@ const Checkout = () => {
                 text: "Los emails deben ser iguales",
                 icon: "error"
             });
-
             return
         }
 
