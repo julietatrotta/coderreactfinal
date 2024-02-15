@@ -7,7 +7,7 @@ import Carrito from './components/Carrito/Carrito'
 import Checkout from './components/Checkout/Checkout'
 
 function App() {
-  
+
   return (
     <>
       <BrowserRouter>

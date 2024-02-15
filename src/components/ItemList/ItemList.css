@@ -1,7 +1,6 @@
 div.ItemList {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #0000805d;*/
     justify-content: space-around;
 }
 

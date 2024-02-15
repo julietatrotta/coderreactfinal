@@ -1,7 +1,47 @@
-div.containerForm{
+div.containerForm {
     width: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(255, 136, 0);
+    margin: auto;
+}
+
+form.checkout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+button.FormBoton {
+    color: white;
+    background-color: #000080;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+
+/* Estilo para input con sólo la línea inferior */
+input.linea-inferior {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+/* Estilo para input enfocado */
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+label{
+    font-weight: bold;
 }

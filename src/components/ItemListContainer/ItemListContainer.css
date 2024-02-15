@@ -4,18 +4,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*width: 100vw; /* Ajusta la altura al 100% del viewport */
     color: rgb(255, 136, 0);
     margin-top: 50px;
     font-weight: lighter;
 }
 
 div.containerItemList{
-    /* min-height: 70vh; */
     width: 100%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 div.ItemListContainer{

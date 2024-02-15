@@ -33,6 +33,5 @@
 
 .CardItem .ItemImg{
     width: 100%;
-    /* display: block;  seria para que ocupe todo el espacio pero como es demasiado grande deja la card gigante*/
     padding: 5px;
 }
